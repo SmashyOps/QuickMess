@@ -1,0 +1,683 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "FC2 Menu API",
+    "version": "2.0.0",
+    "description": "API for uploading and querying weekly and historical menu data for Food Court 2.\n\n## API Versioning\n\nAll menu endpoints support versioning via the `v` query parameter:\n- `v=1` (default): Items returned as string arrays for backward compatibility\n- `v=2`: Items returned as objects with `name` and `tags` fields, meals include `allergens` array\n\n## Menu Types\n\n- **Normal Menu**: Standard food court menu (`/api/menu`, `/api/history`)\n- **Jain Menu**: Vegetarian Jain menu (`/api/jain-menu`, `/api/jain-history`)"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/api/menu": {
+      "get": {
+        "summary": "Get normal menu data",
+        "description": "Returns menu data for the standard food court menu. By default returns the latest available week. You can filter by exact week label, week start date, or a single date.",
+        "tags": [
+          "Normal Menu"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "v",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2"
+              ],
+              "default": "1"
+            },
+            "required": false,
+            "description": "API version. v1 returns items as strings, v2 returns items as objects with tags and includes allergens."
+          },
+          {
+            "in": "query",
+            "name": "week",
+            "schema": {
+              "type": "string"
+            },
+            "required": false,
+            "description": "Exact week label match, e.g. 'August 25 - 31, 2025'"
+          },
+          {
+            "in": "query",
+            "name": "weekStart",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "required": false,
+            "description": "ISO date for first day of week, e.g. 2025-08-25"
+          },
+          {
+            "in": "query",
+            "name": "date",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "required": false,
+            "description": "ISO date for a single day to return only that day"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Menu data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/MenuDataV1"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MenuDataV2"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/history": {
+      "get": {
+        "summary": "Get historical menu data",
+        "description": "Lists all historical menu weeks. The endpoint scans all menu files in storage, groups them by ISO week (Monday-Sunday), and returns only the most recently uploaded menu for each week. Without parameters, returns a list of all available weeks with metadata. With weekStart parameter, returns full menu data for that specific week.",
+        "tags": [
+          "Normal Menu"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "v",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2"
+              ],
+              "default": "1"
+            },
+            "required": false,
+            "description": "API version. v1 returns items as strings, v2 returns items as objects with tags and includes allergens."
+          },
+          {
+            "in": "query",
+            "name": "weekStart",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "required": false,
+            "description": "ISO date for the first day of the week to retrieve (either the Monday of the week or the earliest date in the menu). Example: 2025-08-25"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Historical data - either a list of week summaries or full menu data for a specific week",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoryList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MenuDataV1"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MenuDataV2"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Week not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jain-menu": {
+      "get": {
+        "summary": "Get Jain menu data",
+        "description": "Returns menu data for the Jain (vegetarian) menu. By default returns the latest available week.",
+        "tags": [
+          "Jain Menu"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "v",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2"
+              ],
+              "default": "1"
+            },
+            "required": false,
+            "description": "API version. v1 returns items as strings, v2 returns items as objects with tags and includes allergens."
+          },
+          {
+            "in": "query",
+            "name": "weekStart",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "required": false,
+            "description": "ISO date for first day of week to retrieve a specific week"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Jain menu data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/MenuDataV1"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MenuDataV2"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jain-history": {
+      "get": {
+        "summary": "Get Jain menu history",
+        "description": "Lists all historical Jain menu weeks. Without parameters, returns a list of all available weeks with metadata. With weekStart parameter, returns full menu data for that specific week.",
+        "tags": [
+          "Jain Menu"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "v",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2"
+              ],
+              "default": "1"
+            },
+            "required": false,
+            "description": "API version. v1 returns items as strings, v2 returns items as objects with tags and includes allergens."
+          },
+          {
+            "in": "query",
+            "name": "weekStart",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "required": false,
+            "description": "ISO date for the first day of the week to retrieve"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Historical data - either a list of week summaries or full menu data for a specific week",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/JainHistoryList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MenuDataV1"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MenuDataV2"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Week not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "cookieAuth": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "next-auth.session-token"
+      }
+    },
+    "schemas": {
+      "MenuItem": {
+        "type": "object",
+        "description": "A menu item with optional dietary tags (V2 format)",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the menu item"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "non-veg",
+                "veg-special",
+                "non-veg-special",
+                "other-special",
+                "jain"
+              ]
+            },
+            "description": "Dietary and special tags for the item"
+          }
+        },
+        "required": [
+          "name",
+          "tags"
+        ]
+      },
+      "MealV1": {
+        "type": "object",
+        "description": "A meal with items as strings (V1 format)",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "string",
+            "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+            "example": "07:30"
+          },
+          "endTime": {
+            "type": "string",
+            "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+            "example": "09:30"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "List of item names as strings"
+          }
+        },
+        "required": [
+          "name",
+          "startTime",
+          "endTime",
+          "items"
+        ]
+      },
+      "MealV2": {
+        "type": "object",
+        "description": "A meal with items as objects and allergens (V2 format)",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "string",
+            "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+            "example": "07:30"
+          },
+          "endTime": {
+            "type": "string",
+            "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+            "example": "09:30"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MenuItem"
+            },
+            "minItems": 1,
+            "description": "List of menu items with tags"
+          },
+          "allergens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of allergens present in this meal (e.g., 'Nuts', 'Dairy', 'Gluten')"
+          }
+        },
+        "required": [
+          "name",
+          "startTime",
+          "endTime",
+          "items"
+        ]
+      },
+      "DayMenuV1": {
+        "type": "object",
+        "description": "A day's meals (V1 format)",
+        "properties": {
+          "day": {
+            "type": "string",
+            "description": "Day name (e.g., 'Monday')"
+          },
+          "meals": {
+            "type": "object",
+            "properties": {
+              "breakfast": {
+                "$ref": "#/components/schemas/MealV1"
+              },
+              "lunch": {
+                "$ref": "#/components/schemas/MealV1"
+              },
+              "snacks": {
+                "$ref": "#/components/schemas/MealV1"
+              },
+              "dinner": {
+                "$ref": "#/components/schemas/MealV1"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "day",
+          "meals"
+        ]
+      },
+      "DayMenuV2": {
+        "type": "object",
+        "description": "A day's meals with allergens (V2 format)",
+        "properties": {
+          "day": {
+            "type": "string",
+            "description": "Day name (e.g., 'Monday')"
+          },
+          "meals": {
+            "type": "object",
+            "properties": {
+              "breakfast": {
+                "$ref": "#/components/schemas/MealV2"
+              },
+              "lunch": {
+                "$ref": "#/components/schemas/MealV2"
+              },
+              "snacks": {
+                "$ref": "#/components/schemas/MealV2"
+              },
+              "dinner": {
+                "$ref": "#/components/schemas/MealV2"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "day",
+          "meals"
+        ]
+      },
+      "MenuDataV1": {
+        "type": "object",
+        "description": "Complete menu data (V1 format with string items)",
+        "properties": {
+          "foodCourt": {
+            "type": "string",
+            "description": "Name of the food court",
+            "example": "Food Court 2"
+          },
+          "week": {
+            "type": "string",
+            "description": "Week label",
+            "example": "January 27 - February 2, 2026"
+          },
+          "menu": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DayMenuV1"
+            },
+            "description": "Map of ISO date strings to day menus"
+          }
+        },
+        "required": [
+          "foodCourt",
+          "week",
+          "menu"
+        ]
+      },
+      "MenuDataV2": {
+        "type": "object",
+        "description": "Complete menu data (V2 format with tagged items and allergens)",
+        "properties": {
+          "foodCourt": {
+            "type": "string",
+            "description": "Name of the food court",
+            "example": "Food Court 2"
+          },
+          "week": {
+            "type": "string",
+            "description": "Week label",
+            "example": "January 27 - February 2, 2026"
+          },
+          "menu": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DayMenuV2"
+            },
+            "description": "Map of ISO date strings to day menus"
+          }
+        },
+        "required": [
+          "foodCourt",
+          "week",
+          "menu"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          }
+        }
+      },
+      "WeekSummary": {
+        "type": "object",
+        "description": "Summary metadata for a menu week",
+        "properties": {
+          "week": {
+            "type": "string",
+            "description": "Week label, e.g. 'August 25 - 31, 2025'"
+          },
+          "foodCourt": {
+            "type": "string",
+            "description": "Food court name"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO date of the earliest day in the week"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO date of the latest day in the week"
+          },
+          "numDays": {
+            "type": "integer",
+            "description": "Number of days in the week"
+          },
+          "weekMonday": {
+            "type": "string",
+            "format": "date",
+            "description": "The Monday of the ISO week (Monday-Sunday) this menu belongs to"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when this menu was last uploaded"
+          }
+        },
+        "required": [
+          "week",
+          "foodCourt",
+          "startDate",
+          "endDate",
+          "numDays",
+          "weekMonday",
+          "lastModified"
+        ]
+      },
+      "JainWeekSummary": {
+        "type": "object",
+        "description": "Summary metadata for a Jain menu week",
+        "properties": {
+          "week": {
+            "type": "string",
+            "description": "Week label"
+          },
+          "foodCourt": {
+            "type": "string",
+            "description": "Food court name (includes 'Jain')"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO date of the earliest day in the week"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO date of the latest day in the week"
+          },
+          "numDays": {
+            "type": "integer",
+            "description": "Number of days in the week"
+          }
+        },
+        "required": [
+          "week",
+          "foodCourt",
+          "startDate",
+          "endDate",
+          "numDays"
+        ]
+      },
+      "HistoryList": {
+        "type": "object",
+        "description": "List of available menu weeks",
+        "properties": {
+          "weeks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WeekSummary"
+            },
+            "description": "List of all available weeks from R2 storage, deduplicated by week (Monday-Sunday) with the most recent upload per week"
+          }
+        },
+        "required": [
+          "weeks"
+        ]
+      },
+      "JainHistoryList": {
+        "type": "object",
+        "description": "List of available Jain menu weeks",
+        "properties": {
+          "weeks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JainWeekSummary"
+            },
+            "description": "List of all available Jain menu weeks"
+          }
+        },
+        "required": [
+          "weeks"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Normal Menu",
+      "description": "Standard food court menu endpoints"
+    },
+    {
+      "name": "Jain Menu",
+      "description": "Jain (vegetarian) menu endpoints"
+    }
+  ]
+}

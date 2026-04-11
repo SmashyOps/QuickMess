@@ -1,0 +1,1292 @@
+{
+  "foodCourt": "Food Court 2",
+  "week": "April 6-12, 2026",
+  "menu": {
+    "2026-04-06": {
+      "day": "Monday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Aloo Spinach Paratha",
+              "tags": []
+            },
+            {
+              "name": "Curd, Sweet n Mint Chutney",
+              "tags": []
+            },
+            {
+              "name": "Sooji Upma",
+              "tags": []
+            },
+            {
+              "name": "Coconut Chutney",
+              "tags": []
+            },
+            {
+              "name": "Boiled Egg / Watermelon",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "White n Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Make Your Own Sandwich",
+              "tags": []
+            },
+            {
+              "name": "Fruit Bread",
+              "tags": []
+            },
+            {
+              "name": "Boiled Black Eyed Peas",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Chocolate",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Methi Chapathi",
+              "tags": []
+            },
+            {
+              "name": "Soya Capsicum Curry",
+              "tags": []
+            },
+            {
+              "name": "Aloo Chana Dry",
+              "tags": []
+            },
+            {
+              "name": "Green Moong Dal",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Leafy Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Curd Rice",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Boondi Laddu",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Kacchi Dabeli (1 PC)",
+              "tags": []
+            },
+            {
+              "name": "Tomato Ketchup",
+              "tags": []
+            },
+            {
+              "name": "Hot n Cold Milk",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Jeera Roti",
+              "tags": []
+            },
+            {
+              "name": "Chicken Kolhapuri",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Paneer Butter Masala",
+              "tags": []
+            },
+            {
+              "name": "Dum Mint Rice",
+              "tags": []
+            },
+            {
+              "name": "Beetroot Raitha",
+              "tags": []
+            },
+            {
+              "name": "Smoked Dal",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Green Pea Subji",
+              "tags": []
+            },
+            {
+              "name": "Tomato Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Spiced Onion Slices",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    },
+    "2026-04-07": {
+      "day": "Tuesday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Millet Idli / Plain Idli",
+              "tags": []
+            },
+            {
+              "name": "Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Coconut Chutney",
+              "tags": []
+            },
+            {
+              "name": "Matar Poha",
+              "tags": []
+            },
+            {
+              "name": "Cornflakes with Cold Milk",
+              "tags": []
+            },
+            {
+              "name": "Egg Omelette / Papaya",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "White Bread",
+              "tags": []
+            },
+            {
+              "name": "Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Red Channa Sprouts",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Milk",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Plain Roti",
+              "tags": []
+            },
+            {
+              "name": "Veg Kadai",
+              "tags": []
+            },
+            {
+              "name": "Lajawab Bhindi",
+              "tags": []
+            },
+            {
+              "name": "Dal Fry",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Kumbala Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Mix Veg Chutney",
+              "tags": []
+            },
+            {
+              "name": "American Corn Salad",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Mangalore Bajji",
+              "tags": []
+            },
+            {
+              "name": "Coconut Chutney",
+              "tags": []
+            },
+            {
+              "name": "Kiwi Slice Cake",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Bournvita",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Ajwain Paratha",
+              "tags": []
+            },
+            {
+              "name": "Egg Maharaja",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Babycorn Angara",
+              "tags": []
+            },
+            {
+              "name": "Sprouts n Carrot Subzi",
+              "tags": []
+            },
+            {
+              "name": "Hariyali Pulav, Raitha",
+              "tags": []
+            },
+            {
+              "name": "Dal Lasooni",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Ice Cream",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    },
+    "2026-04-08": {
+      "day": "Wednesday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Set Dosa",
+              "tags": []
+            },
+            {
+              "name": "Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Coconut Chutney",
+              "tags": []
+            },
+            {
+              "name": "Chikku Sheera",
+              "tags": []
+            },
+            {
+              "name": "Choco Banana Shake",
+              "tags": []
+            },
+            {
+              "name": "White Bread",
+              "tags": []
+            },
+            {
+              "name": "Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Sprouted Moong",
+              "tags": []
+            },
+            {
+              "name": "Peanut Butter",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Boost",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Pudina Roti",
+              "tags": []
+            },
+            {
+              "name": "Punjabi Kadhi Pakora",
+              "tags": []
+            },
+            {
+              "name": "Aloo Shimla Mirchi",
+              "tags": []
+            },
+            {
+              "name": "Cholar Dal",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Ginger Lemon Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd",
+              "tags": []
+            },
+            {
+              "name": "Pickle",
+              "tags": []
+            },
+            {
+              "name": "Lemon Sabja Juice",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Misal Pav (2 PC)",
+              "tags": []
+            },
+            {
+              "name": "Chopped Onion, Lemon Weges",
+              "tags": []
+            },
+            {
+              "name": "Mix Farsan",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Milk",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Beetroot Roti",
+              "tags": []
+            },
+            {
+              "name": "Roasted Chicken (Oven)",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Paneer Crispy",
+              "tags": []
+            },
+            {
+              "name": "White Peas Curry",
+              "tags": []
+            },
+            {
+              "name": "Kushka Rice",
+              "tags": []
+            },
+            {
+              "name": "Dal Gujrathi",
+              "tags": []
+            },
+            {
+              "name": "Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Onion Cubes",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    },
+    "2026-04-09": {
+      "day": "Thursday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Mix Veg Paratha",
+              "tags": []
+            },
+            {
+              "name": "Imli n Green Chutney, Curd",
+              "tags": []
+            },
+            {
+              "name": "Lemon Seviya, Raitha",
+              "tags": []
+            },
+            {
+              "name": "Chocoflakes with Cold Milk",
+              "tags": []
+            },
+            {
+              "name": "Boiled Egg / Banana",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "White n Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Make Your Own Sandwich",
+              "tags": []
+            },
+            {
+              "name": "Boiled Peanuts",
+              "tags": []
+            },
+            {
+              "name": "Pineapple Jam",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Milk",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Coriander Chapathi",
+              "tags": []
+            },
+            {
+              "name": "Rajma Masala",
+              "tags": []
+            },
+            {
+              "name": "Gobi Tamatar Dry",
+              "tags": []
+            },
+            {
+              "name": "Dal Palak",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Mix Veg Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Curd Rice",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Jalebi",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Masala Bun (1 PC)",
+              "tags": []
+            },
+            {
+              "name": "Tomato Sauce",
+              "tags": []
+            },
+            {
+              "name": "Hot Milk",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Chapathi",
+              "tags": []
+            },
+            {
+              "name": "Egg Malai Masala",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Malai Kofta",
+              "tags": []
+            },
+            {
+              "name": "Cabbage Matar Dry",
+              "tags": []
+            },
+            {
+              "name": "Burnt Garlic Rice",
+              "tags": []
+            },
+            {
+              "name": "Dal Methi",
+              "tags": []
+            },
+            {
+              "name": "Steam Rice",
+              "tags": []
+            },
+            {
+              "name": "Ginger Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Cucumber, Carrot & Beetroot Slices",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    },
+    "2026-04-10": {
+      "day": "Friday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Foxtail Millet Dosa & Sada Dosa",
+              "tags": []
+            },
+            {
+              "name": "Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Coconut Chutney",
+              "tags": []
+            },
+            {
+              "name": "Tomato Bath",
+              "tags": []
+            },
+            {
+              "name": "Boiled Eggs/ Sweet Lime",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "White n Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Chocolate Sauce",
+              "tags": []
+            },
+            {
+              "name": "Sweet Potato",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Cold Badam",
+              "tags": []
+            },
+            {
+              "name": "Masala Tea, Coffee",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Chapathi",
+              "tags": []
+            },
+            {
+              "name": "Veg Hari Bhari",
+              "tags": []
+            },
+            {
+              "name": "Chatpata Aloo Gobi",
+              "tags": []
+            },
+            {
+              "name": "Dal Khichdi",
+              "tags": []
+            },
+            {
+              "name": "Steam Rice",
+              "tags": []
+            },
+            {
+              "name": "Dal Jeera Fry",
+              "tags": []
+            },
+            {
+              "name": "Harive Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Raja Peanut Salad",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Stuffed Roll ( 1 PC )",
+              "tags": []
+            },
+            {
+              "name": "Tomato Sauce",
+              "tags": []
+            },
+            {
+              "name": "Jaggery Elaichi Tea",
+              "tags": []
+            },
+            {
+              "name": "Coffee, Hot Milk",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Mint Roti",
+              "tags": []
+            },
+            {
+              "name": "Chicken Tikka Masala",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Paneer Lasooni",
+              "tags": []
+            },
+            {
+              "name": "Cabbage Peas Pulao",
+              "tags": []
+            },
+            {
+              "name": "Grated Cucumber Raitha",
+              "tags": []
+            },
+            {
+              "name": "Dal Shorba",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Badam Burfi",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    },
+    "2026-04-11": {
+      "day": "Saturday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Plain Idli",
+              "tags": []
+            },
+            {
+              "name": "Medu Vada",
+              "tags": []
+            },
+            {
+              "name": "Mix Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Coconut Chutney",
+              "tags": []
+            },
+            {
+              "name": "Cornflakes with Cold Milk",
+              "tags": []
+            },
+            {
+              "name": "Bull's Eye / Whole Chickoo",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "White Bread",
+              "tags": []
+            },
+            {
+              "name": "Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Chickpea Sproutes",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Milk",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Palak Poori",
+              "tags": []
+            },
+            {
+              "name": "Amritsari Chole",
+              "tags": []
+            },
+            {
+              "name": "Aloo Sukha Bhaji",
+              "tags": []
+            },
+            {
+              "name": "Dal Triveti",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Kokkam Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd",
+              "tags": []
+            },
+            {
+              "name": "Tomato Pickle",
+              "tags": []
+            },
+            {
+              "name": "Raw Mango Chutney",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Bread Masala",
+              "tags": []
+            },
+            {
+              "name": "Tomato Sauce",
+              "tags": []
+            },
+            {
+              "name": "Hot Milk",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Masala Paratha",
+              "tags": []
+            },
+            {
+              "name": "Red Channa Curry",
+              "tags": []
+            },
+            {
+              "name": "Aloo Methi Dry",
+              "tags": []
+            },
+            {
+              "name": "Rajma Rice",
+              "tags": []
+            },
+            {
+              "name": "Dal Masala",
+              "tags": []
+            },
+            {
+              "name": "Matki ki Sabzi",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd",
+              "tags": []
+            },
+            {
+              "name": "Pickle",
+              "tags": []
+            },
+            {
+              "name": "Lemon Grass Tea",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    },
+    "2026-04-12": {
+      "day": "Sunday",
+      "meals": {
+        "breakfast": {
+          "name": "Happy Morning Breakfast",
+          "startTime": "07:00",
+          "endTime": "09:30",
+          "items": [
+            {
+              "name": "Masala Dosa / Plain Dosa",
+              "tags": []
+            },
+            {
+              "name": "Sambhar, Coconut Chutney, Poha",
+              "tags": []
+            },
+            {
+              "name": "Cornflakes with Cold Milk",
+              "tags": []
+            },
+            {
+              "name": "Boiled Egg/ Banana",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Ciabetta Bread",
+              "tags": []
+            },
+            {
+              "name": "White Bread",
+              "tags": []
+            },
+            {
+              "name": "Brown Bread",
+              "tags": []
+            },
+            {
+              "name": "Assorted Sprouts",
+              "tags": []
+            },
+            {
+              "name": "Butter n Mix Jam",
+              "tags": []
+            },
+            {
+              "name": "Peanut Butter",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Milk",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "lunch": {
+          "name": "Wholesome Lunch",
+          "startTime": "11:45",
+          "endTime": "14:15",
+          "items": [
+            {
+              "name": "Mint Roti",
+              "tags": []
+            },
+            {
+              "name": "Chicken Kalimirch",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Paneer Methi Chaman",
+              "tags": []
+            },
+            {
+              "name": "Corn Pulao, Boondi Raitha",
+              "tags": []
+            },
+            {
+              "name": "Kundru North Subzi",
+              "tags": []
+            },
+            {
+              "name": "Sultani Dal",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice, Gulla Sambhar",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Kiwi Pastry",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        },
+        "snacks": {
+          "name": "Refreshing Hi Tea",
+          "startTime": "16:30",
+          "endTime": "18:00",
+          "items": [
+            {
+              "name": "Vermicelli  Pulao",
+              "tags": []
+            },
+            {
+              "name": "Mix Raitha",
+              "tags": []
+            },
+            {
+              "name": "Jeera Khari (1 PC)",
+              "tags": []
+            },
+            {
+              "name": "Tea, Coffee, Hot Boost",
+              "tags": []
+            }
+          ],
+          "allergens": []
+        },
+        "dinner": {
+          "name": "Delicious Dinner",
+          "startTime": "19:00",
+          "endTime": "21:30",
+          "items": [
+            {
+              "name": "Curry Leaves Chapathi",
+              "tags": []
+            },
+            {
+              "name": "Egg Maratha",
+              "tags": [
+                "non-veg",
+                "non-veg-special"
+              ]
+            },
+            {
+              "name": "Veggies in Mint Curry",
+              "tags": []
+            },
+            {
+              "name": "Jeera Rice",
+              "tags": []
+            },
+            {
+              "name": "Mix Pulses Dry",
+              "tags": []
+            },
+            {
+              "name": "Plain Dal",
+              "tags": []
+            },
+            {
+              "name": "Plain Rice",
+              "tags": []
+            },
+            {
+              "name": "Lemon Rasam",
+              "tags": []
+            },
+            {
+              "name": "Plain Curd, Pickle",
+              "tags": []
+            },
+            {
+              "name": "Salad",
+              "tags": [
+                "other-special"
+              ]
+            }
+          ],
+          "allergens": []
+        }
+      }
+    }
+  }
+}

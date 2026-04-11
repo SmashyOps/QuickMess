@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FC2 Menu Ratings</title>
+</head>
+<body>
+
+  <h1>Food Court 2 — Menu</h1>
+
+  {% for day in days %}
+    <div>
+      <h2>{{ day.day_name }} — {{ day.date }}</h2>
+
+      {% for meal in day.meals %}
+        <div>
+          <h3>{{ meal.display_name }}</h3>
+          <p>{{ meal.start_time }} – {{ meal.end_time }}</p>
+
+          <ul>
+            {% for item in meal["items"] %}
+              <li>
+                {{ item.name }}
+                {% if "non-veg" in item.tags %}
+                  <span style="color:red;">[Non-Veg]</span>
+                {% endif %}
+                {% if "other-special" in item.tags %}
+                  <span style="color:goldenrod;">★ Special</span>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+
+    </div>
+  {% endfor %}
+
+</body>
+</html>
