@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+#header_otl { /* gradient */
+    width: 100%;
+    padding: 1.1574%;
+    aspect-ratio: 1 / 0.13889;  
+    background-image: linear-gradient(to right, #FF6600, #FF001E);
+    overflow: hidden;
+}
+
+#header {
+    width: 100%;
+    height: 100%;
+    background-color: #141414;
+    border-radius: 2.7778vw;
+    display: flex;
+    align-items: center;
+}
+
+#quickmess {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 2% 4%;
+    align-items: center;
+    color: white;
+    font-size: 6vw;
+}
+
+/* nav links */
+#nav_links {
+    margin: 0;
+    padding: 3% 25%;
+    color: white;
+    font-size: 2vw;
+    display: flex;
+    gap: 1.3887vw;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+#nav_links a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+#nav_links a:not(:last-child)::after {
+    content: "|";
+    margin-left: 1.3887vw;
+    color: white;
+    opacity: 0.5;
+}
+
+/* main page section */
+#main_sec {
+    width: 100%;
+    aspect-ratio: 1 / 0.43617;
+    margin: 0%;
+    padding: 0%;
+    background-image: url('biryani.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main_ctnt_otl {
+    width: 62%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+    background-image: linear-gradient(to bottom right, #FF6112, #FF0000);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main_ctnt {
+    width: 95%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 21.043% 100%);
+    background-color: #141414;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#main_desc {
+    width: 100%;
+    height: 50%;
+    padding-left: 16%;
+    padding-top: 10%;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background: linear-gradient(to bottom, #FFBB00, #FF6F00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 4.25vw;
+}
+
+#main_buttons {
+    width: 100%;
+    height: 100%;
+    padding-left: 40%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#check_menu_btn {
+    width: 17.78vw;
+    aspect-ratio: 1 / 0.25;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+
+    border: 0.3vw solid transparent; 
+    background-image: linear-gradient(to right, #161516, #131212), 
+                    linear-gradient(to left, rgb(255, 0, 0), #ff4800);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.2778vw;
+}
+
+#OR_main_txt {
+    margin: 5%;
+    padding-left: 17.5%;
+    font-size: 1.75vw;
+    color: white;
+}
+
+#rate_meals_btn {
+    width: 17.78vw;
+    aspect-ratio: 1 / 0.25;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+
+    border: 0.3vw solid transparent; 
+    background-image: linear-gradient(to right, #161516, #131212), 
+                    linear-gradient(to right, rgb(255, 0, 72), #ff009d);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.2778vw;
+}
+
